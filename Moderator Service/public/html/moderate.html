@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="moderate.js"></script>
+    <link rel="stylesheet" href="moderate.css">
+
+    <title>Moderator</title>
+</head>
+<body onload="javascript:addOptions()">
+    <h1 class="title_header">Moderate a Joke</h1>
+    <div class="button_wrapper">
+        <button onclick="javascript:requestJokes()">Request Joke</button>
+        <h2 style="display: none;" id="alert_message">No jokes left to moderate!</h2>
+    </div>
+    <form id="my-form" action="/submitJoke" method="POST" onsubmit="return false;" class="submit_wrapper">
+        <div class="input_container">
+            <div>
+                <label>Joke ID</label>
+                <input id="id" type="text" name="id" size="20"></input>
+            </div>
+            <div>
+                <label>Joke Type</label>
+                <input id="type" type="text" name="type" required></input>
+            </div>
+            <div class="joke_type_wrapper">
+                <label for="joke_type">Choose joke type:</label>
+                <select id="joke_type" name="type" onchange="changeJoke()">
+                </select>
+            </div>
+            <div>
+                <label>Joke Setup</label>
+                <input id="setup" type="text" cols="30" rows="10" name="setup" required></input>
+            </div>
+            <div>
+                <label>Joke Punchline</label>
+                <input id="punchline" type="text" cols="30" rows="10" name="punchline" required></input>
+            </div>
+        </div>
+        <button id="submit-btn" class="submit-btn" type="submit" onclick="javascript:submitJoke()">Submit Joke</button>
+        
+    </form>
+    <div class="button_wrapper">
+        <button class="button_wrapper" onclick="javascript:onDeleteJoke()">Delete Joke</button>
+    </div>
+    <form class="button_wrapper" action="/logout" method="post">
+        <button type="submit">Log out</button>
+    </form>
+    <!-- <button onclick="javascript:nextJoke()">Next Joke</button> -->
+
+</body>
+</html>
+
+<!-- method="post" action="/submitJoke" -->

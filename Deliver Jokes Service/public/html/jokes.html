@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="jokes.js"></script>
+  
+  <link rel="stylesheet" href="jokes.css">
+  <title>Jokes</title>
+</head>
+<body onload="javascript:addOptions()">
+  <h1 class="joke_header">Joke Central</h1>
+
+  <div class="joke_type_wrapper">
+    <label for="joke_type_label">Choose a type of joke:</label>
+    <select id="joke_type" name="type">
+    </select>
+  </div>
+  <br>
+  <br>
+  <div class="joke_number_wrapper">
+    <label for="numJokes">How many jokes do you want?</label>
+    <input type="number" id="numJokes" name="numJokes" min="1" max="10" value="1">
+  </div>
+  <br>
+  <div  class="joke_button_wrapper">
+    <button class="button" onclick="javascript:getJoke()">Get Joke</button>
+  </div>
+
+
+  <div id="joke" class="single_joke_wrapper">
+    <br>
+    <p id="setup" style="color: red;" onclick="copyText(document.getElementById('joke').id)"> <!--setup goes here--></p> 
+    <p id="punchline" style="color: blue;" onclick="copyText(document.getElementById('joke').id)"> <!--punchline goes here--></p>
+  </div>
+
+  <div> 
+    <table id="jokeTable" class="joke_Table_Wrapper" onclick="copyText(document.getElementById('jokeTable').id)">
+      <tr>
+        <th id="table_type">Type</th>
+        <th id="table_setup">Setup</th>
+        <th id="table_punchline">Punchline</th>
+      </tr>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div>
+</div>
+
+</body>
+
+</html>

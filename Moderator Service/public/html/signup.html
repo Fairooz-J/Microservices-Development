@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <script src="moderate.js"></script>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+    <form id="login-form" action="/signup" method="POST" onsubmit="return false;">
+        <h3>Signup System</h3>
+        <label>Username:</label>
+        <input type="text" id="username" placeholder="Enter Username" name="username" required>
+        <label id="error-message-username"></label>
+        <br>
+        <label>Password:</label>
+        <input type="text" id="password" placeholder="Enter Password" name="password" required>
+        <br>
+        <label id="error-message-password"></label>
+        <label id="success-message"></label>
+        <input type="submit"id="login-button" value="Signup"onclick="javascript:submitForm()"></input>
+    </form>
+    <a class="register_button"href="/login">
+        <button id="create-button">Log in</button>
+    </a>
+</body>
+</html>
+
+<!-- action="/signup" method="POST" id="login-form" -->

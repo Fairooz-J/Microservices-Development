@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="submit.js"></script>
+    <link rel="stylesheet" href="submit.css">
+
+    <title>Submit Jokes</title>
+</head>
+<body onload="javascript:addOptions()">
+
+    <h1 class="title_header">Submit jokes to MongoDB Atlas</h1>
+    <form method="post" action="/joke" class="submit_wrapper">
+        <div class="joke_type_wrapper">
+            <label for="joke_type">Choose joke type:</label>
+            <select id="joke_type" name="type">
+            </select>
+        </div>
+        <div>
+            <label>Joke Setup</label>
+            <textarea id="" cols="30" rows="10" name="setup"></textarea>
+        </div>
+        <div>
+            <label>Joke Punchline</label>
+            <textarea id="" cols="30" rows="10" name="punchline"></textarea>
+        </div>
+        <div>
+            <button>
+                Submit Joke
+            </button>
+        </div>
+    </form>
+
+</body>
+</html>

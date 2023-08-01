@@ -1,0 +1,46 @@
+.joke_header{
+    text-align: center;
+}
+
+.joke_type_wrapper
+{
+    text-align: center;
+}
+
+.joke_number_wrapper
+{
+    text-align: center;
+}
+
+.joke_button_wrapper
+{
+    text-align: center;
+}
+
+.single_joke_wrapper
+{
+    text-align: center;
+}
+
+.joke_Table_Wrapper
+{
+    margin: 0 auto;
+    text-align: center;
+}
+
+table{
+    background-color:black;
+}
+
+th {
+    background-color:gray;
+    Color:white;
+}
+
+td{
+    color: yellow;
+}
+
+th, td {
+    padding: 10px;
+}
